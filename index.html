@@ -1,116 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>autoDocs - Auto Documentation Generator</title>
-    <link href="./dist/output.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autodoc</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
-    <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-6">
-                <div class="flex items-center">
-                    <h1 class="text-2xl font-bold text-gray-900">autoDocs</h1>
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#features" class="text-gray-500 hover:text-gray-900 transition-colors">Features</a>
-                    <a href="#about" class="text-gray-500 hover:text-gray-900 transition-colors">About</a>
-                    <a href="#contact" class="text-gray-500 hover:text-gray-900 transition-colors">Contact</a>
-                </nav>
-            </div>
+<body class="text-gray-600">
+  <!-- HERO -->
+  <header class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">Create & update product docs in minutes</h1>
+      <p class="mt-4 text-lg">Automate walkthrough videos, screenshots & step-by-step text — built from a single prompt.</p>
+      <p class="mt-6 inline-block bg-gray-100 rounded-lg px-4 py-2 italic text-gray-500">“Show users how to invite a teammate and set permissions.”</p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-4">
+        <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium shadow text-center">Get early access</a>
+        <a href="#" class="bg-white border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg font-medium shadow text-center">Watch 60-sec demo</a>
+      </div>
+      <div class="mt-10 grid gap-8 lg:grid-cols-2">
+        <figure class="flex flex-col items-center">
+          <div class="w-full overflow-hidden rounded-lg shadow-lg">
+            <video src="demo.mp4" autoplay muted loop class="w-full"></video>
+          </div>
+          <figcaption class="mt-2 text-sm text-gray-500 text-center">Walkthrough video in all your languages</figcaption>
+        </figure>
+        <figure class="flex flex-col items-center">
+          <div class="space-y-4 w-full">
+            <img src="placeholder.png" alt="screenshot" class="rounded-lg shadow-lg w-full">
+            <img src="placeholder.png" alt="screenshot" class="rounded-lg shadow-lg w-full">
+            <img src="placeholder.png" alt="screenshot" class="rounded-lg shadow-lg w-full">
+          </div>
+          <figcaption class="mt-2 text-sm text-gray-500 text-center">How-to guide in all your languages</figcaption>
+        </figure>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROBLEM & SOLUTION -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-6 grid gap-12 md:grid-cols-2">
+      <div>
+        <h3 class="text-2xl font-bold text-gray-900">Creating documentation is tedious, time-consuming—yet critical to every business.</h3>
+        <ul class="mt-4 list-disc pl-5 space-y-2">
+          <li>Manual recording, trimming, annotation</li>
+          <li>Re-doing screenshots & text for every update</li>
+          <li>Repeat the whole cycle for every language</li>
+          <li>Or hire freelancers → long review cycles, big bills</li>
+        </ul>
+        <p class="mt-4 italic">All that before your next release even ships—so you redo it again, or let docs sit untouched for years.</p>
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold text-gray-900">Autodoc does it all in under 5 minutes.</h3>
+        <ol class="mt-4 list-decimal pl-5 space-y-2">
+          <li>Single prompt → polished assets for marketing & sales</li>
+          <li>CLI / CI command → docs on every build</li>
+          <li>Instant localisation* (Super / Enterprise)</li>
+          <li>Always up‑to‑date with each release</li>
+          <li>Costs a fraction of manual time & budget</li>
+        </ol>
+        <p class="mt-4 font-bold">Built for speed and scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-gray-900 text-center">How it works</h2>
+      <div class="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div class="bg-white rounded-xl shadow p-6 text-center flex flex-col">
+          <h4 class="font-semibold text-lg text-gray-900">Connect your repo</h4>
+          <p class="mt-2">Link GitHub/GitLab/Bitbucket, set env vars.</p>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="text-center">
-            <h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Auto Documentation
-                <span class="text-indigo-600">Generator</span>
-            </h2>
-            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                Streamline your development workflow with intelligent, automated documentation generation for your codebase.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
-                    Get Started
-                </button>
-                <button class="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
-                    Learn More
-                </button>
-            </div>
+        <div class="bg-white rounded-xl shadow p-6 text-center flex flex-col">
+          <h4 class="font-semibold text-lg text-gray-900">Trigger a job</h4>
+          <p class="mt-2">Run from a prompt or CLI in CI/CD.</p>
         </div>
-
-        <!-- Features Section -->
-        <section id="features" class="mt-20">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl font-bold text-gray-900 mb-4">Features</h3>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Powerful tools to automatically generate comprehensive documentation for your projects
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Smart Generation</h4>
-                    <p class="text-gray-600">Automatically analyze your code and generate comprehensive documentation with intelligent insights.</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Lightning Fast</h4>
-                    <p class="text-gray-600">Process entire codebases in seconds with optimized algorithms and parallel processing.</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Customizable</h4>
-                    <p class="text-gray-600">Tailor documentation formats, styles, and content to match your project's unique requirements.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="mt-20">
-            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-6">About autoDocs</h3>
-                    <p class="text-lg text-gray-600 mb-6">
-                        autoDocs is designed to eliminate the tedious task of manual documentation writing. 
-                        Our intelligent system understands your code structure, dependencies, and functionality 
-                        to create professional, comprehensive documentation automatically.
-                    </p>
-                    <p class="text-gray-600">
-                        Whether you're working on a small project or managing enterprise-level codebases, 
-                        autoDocs scales with your needs and keeps your documentation always up-to-date.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div class="text-center text-gray-500">
-                <p>&copy; 2024 autoDocs. Built with ❤️ for developers.</p>
-            </div>
+        <div class="bg-white rounded-xl shadow p-6 text-center flex flex-col">
+          <h4 class="font-semibold text-lg text-gray-900">Review docs</h4>
+          <p class="mt-2">Receive video, screenshots & markdown; tweak if needed.</p>
         </div>
-    </footer>
+        <div class="bg-white rounded-xl shadow p-6 text-center flex flex-col">
+          <h4 class="font-semibold text-lg text-gray-900">Publish anywhere</h4>
+          <p class="mt-2">Push to Notion, Markdown, YouTube, Intercom, Zendesk, Help Scout, Zapier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FEATURES -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-gray-900 text-center">Key features</h2>
+      <div class="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div class="bg-white rounded-xl shadow p-6 text-center flex flex-col">
+          <h4 class="font-semibold text-lg text-gray-900">Video + face-sync voice-over</h4>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 text-center flex flex-col">
+          <h4 class="font-semibold text-lg text-gray-900">Smart screenshots</h4>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 text-center flex flex-col">
+          <h4 class="font-semibold text-lg text-gray-900">Article builder</h4>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 text-center flex flex-col">
+          <h4 class="font-semibold text-lg text-gray-900">Instant localisation* (only Super & Enterprise)</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-gray-900 text-center">Use cases</h2>
+      <div class="mt-10 grid gap-8 md:grid-cols-2">
+        <div class="bg-white rounded-lg shadow p-6">Knowledge-base upkeep</div>
+        <div class="bg-white rounded-lg shadow p-6">Onboarding & walkthroughs</div>
+        <div class="bg-white rounded-lg shadow p-6">Personalised support videos</div>
+        <div class="bg-white rounded-lg shadow p-6">Sales & marketing demos</div>
+        <div class="bg-white rounded-lg shadow p-6">Release notes</div>
+        <div class="bg-white rounded-lg shadow p-6">Internal training & SOPs</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-gray-900 text-center">Pricing</h2>
+      <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+        <div class="border rounded-lg p-6 flex flex-col">
+          <h3 class="text-xl font-semibold text-gray-900">Pay‑as‑you‑go</h3>
+          <p class="mt-1">from $50 / 1 M tokens</p>
+          <p class="mt-4 text-sm">1 seat • Markdown only • Localization add‑on.</p>
+        </div>
+        <div class="border rounded-lg p-6 flex flex-col">
+          <h3 class="text-xl font-semibold text-gray-900">Basic</h3>
+          <p class="mt-1">$99/mo</p>
+          <p class="mt-4 text-sm">1 seat • 6 M tokens • Markdown only • Localization add‑on.</p>
+        </div>
+        <div class="border-2 border-indigo-600 rounded-lg p-6 flex flex-col">
+          <h3 class="text-xl font-semibold text-gray-900">Pro</h3>
+          <p class="mt-1">$249/mo</p>
+          <p class="mt-4 text-sm">multi‑seat • 12 M tokens • Markdown + Zapier/HelpScout/Intercom/Notion • Localization add‑on.</p>
+        </div>
+        <div class="border rounded-lg p-6 flex flex-col">
+          <h3 class="text-xl font-semibold text-gray-900">Super</h3>
+          <p class="mt-1">$749/mo</p>
+          <p class="mt-4 text-sm">multi‑seat • 36 M tokens • Integrations + priority support • Localization included.</p>
+        </div>
+        <div class="border rounded-lg p-6 flex flex-col">
+          <h3 class="text-xl font-semibold text-gray-900">Enterprise</h3>
+          <p class="mt-1">Custom</p>
+          <p class="mt-4 text-sm">unlimited seats • custom tokens • all integrations + SLA/on‑prem • Localization included.</p>
+        </div>
+      </div>
+      <p class="mt-8 text-sm text-center text-gray-500">All plans include AI face‑sync video, smart screenshots, article builder, CLI/API triggers & version diff.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-100 py-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm">
+      <div class="flex items-center space-x-2">
+        <img src="placeholder.png" alt="logo" class="h-6 w-auto">
+        <span class="font-bold text-gray-900">Autodoc</span>
+      </div>
+      <p class="mt-4 md:mt-0">© 2024 Autodoc</p>
+      <nav class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-gray-900">Privacy</a>
+        <a href="#" class="hover:text-gray-900">Twitter</a>
+        <a href="#" class="hover:text-gray-900">Docs</a>
+      </nav>
+    </div>
+  </footer>
 </body>
-</html> 
+</html>
